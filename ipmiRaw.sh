@@ -7,6 +7,12 @@
 USER='ADMIN'
 PASSWD='ADMIN'
 OEM_RAW_CMD='0x30 0x2D '
+
+if [  "$#" -le 2 ]; then
+	echo " Usage : $0 IP sensor-name"
+	exit 1
+fi
+
 IP=$1
 
 shift
