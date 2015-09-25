@@ -3,7 +3,7 @@
 
 USER='ADMIN'
 PASSWD='ADMIN'
-OEM_RAW_CMD='0x30 0x2D '
+OEM_RAW_CMD='0x30 0x03 '
 
 echo "$#"
 if [  $# -lt 1 ]; then
@@ -13,7 +13,7 @@ fi
 
 IP=$1
 
-ipmitool -H ${IP} -U ${USER} -P ${PASSWD} raw 0x30 0x03
+ipmitool -H ${IP} -U ${USER} -P ${PASSWD} raw ${OEM_RAW_CMD}
 
 [ $? -eq 0 ] && echo "success" || echo "failed"
 
