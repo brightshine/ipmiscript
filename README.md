@@ -1,2 +1,2 @@
 # ipmitool
-IPMI Tool program 
+Shell scripts to debug IPMI tool easily 
